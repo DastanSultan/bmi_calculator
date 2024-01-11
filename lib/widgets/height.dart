@@ -1,7 +1,5 @@
+import 'package:bmi_calculator/home.dart';
 import 'package:flutter/material.dart';
-
-int weight = 50;
-int ages = 18;
 
 class weighta extends StatefulWidget {
   @override
@@ -10,33 +8,39 @@ class weighta extends StatefulWidget {
 
 class _weightaState extends State<weighta> {
   Widget weif() {
-    return InkWell(
-      onTap: () {
-        setState(() {});
-      },
-      child: Container(
-          margin: EdgeInsets.only(left: 10),
-          width: 150,
-          height: 100,
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-              color: Colors.white, borderRadius: BorderRadius.circular(10)),
-          child: Text(
-            "col[i],",
-            style: TextStyle(color: Colors.black, fontSize: 20),
-          )),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text("Боюнун узундугу",
+            style: TextStyle(color: Colors.white, fontSize: 22)),
+        SizedBox(height: 20),
+        Text("${hoch.cm} см",
+            style: TextStyle(color: Colors.white, fontSize: 30)),
+        Slider(
+          value: hoch.cm,
+          thumbColor: Colors.amber,
+          inactiveColor: Colors.white,
+          onChanged: (newCm) {
+            setState(() {
+              hoch.cm = newCm;
+            });
+          },
+          min: 150,
+          max: 195,
+          divisions: 50,
+        ),
+      ],
     );
   }
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
-      child: Row(
-        children: [
-          weif(),
-        ],
-      ),
+      width: MediaQuery.of(context).size.width * 0.9,
+      height: 180,
+      decoration: BoxDecoration(
+          color: Color(0xFFF0A011F), borderRadius: BorderRadius.circular(10)),
+      child: weif(),
     );
   }
 }
