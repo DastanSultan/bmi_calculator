@@ -2,6 +2,7 @@ import 'package:bmi_calculator/widgets/age.dart';
 import 'package:bmi_calculator/widgets/height.dart';
 import 'package:bmi_calculator/widgets/sex.dart';
 import 'package:flutter/material.dart';
+// Language: Dart
 
 class myApp extends StatefulWidget {
   @override
