@@ -1,1 +1,5 @@
 *.dart linguist-language=Dart
+images/* linguist-vendored
+PSCyr/pscyr0.4d.zip linguist-vendored
+Documents/* linguist-documentation
+*.dart linguist-documentation
